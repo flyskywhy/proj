@@ -3,7 +3,7 @@
 # Author: Li Zheng <flyskywhy@gmail.com>
 # Automatically clone repositorys that current project needed.
 
-GIT_SERVER='git@192.0.7.177:/pub/gittrees/'
+GIT_SERVER='git@192.0.7.177:/pub/gittrees'
 
 # Under Linux, if USE_MINGW is set here manually, or
 # under Windows, it will build Windows application.
