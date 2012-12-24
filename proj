@@ -55,6 +55,7 @@ elif [ $1 = clone ] ; then
 #   proj_clone romete_repository branch folder local_repository
     proj_clone android-apps-host adb-gb apps adb
     proj_clone android-ndk-r7b master tools android-ndk-r7b
+    proj_clone android-apps-host android-apps-host-gb tools android-apps-host
 if [ -n "$USE_MINGW" ]; then
     proj_clone android-sdk windows tools android-sdk
     proj_clone eclipse win32 tools eclipse
@@ -65,11 +66,13 @@ fi
 elif [ $1 = pull ] ; then
     proj_pull apps adb
     proj_pull tools android-ndk-r7b
+    proj_pull tools android-apps-host
     proj_pull tools android-sdk
     proj_pull tools eclipse
 elif [ $1 = fetch ] ; then
     proj_fetch apps adb
     proj_fetch tools android-ndk-r7b
+    proj_fetch tools android-apps-host
     proj_fetch tools android-sdk
     proj_fetch tools eclipse
 else
