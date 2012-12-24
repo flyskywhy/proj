@@ -3,7 +3,7 @@
 # Author: Li Zheng <flyskywhy@gmail.com>
 # Automatically clone repositorys that current project needed.
 
-GIT_SERVER='git@192.0.7.177:/pub/gittrees'
+GIT_SERVER='git://github.com/flyskywhy'
 
 # Under Linux, if USE_MINGW is set here manually, or
 # under Windows, it will build Windows application.
@@ -54,13 +54,13 @@ if [ $# = 0 ] ; then
 elif [ $1 = clone ] ; then
 #   proj_clone romete_repository branch folder local_repository
     proj_clone android-apps-host adb-gb apps adb
-    proj_clone tools/android-ndk-r7b master tools android-ndk-r7b
+    proj_clone android-ndk-r7b master tools android-ndk-r7b
 if [ -n "$USE_MINGW" ]; then
-    proj_clone tools/android-sdk windows tools android-sdk
-    proj_clone tools/eclipse win32 tools eclipse
+    proj_clone android-sdk windows tools android-sdk
+    proj_clone eclipse win32 tools eclipse
 else
-    proj_clone tools/android-sdk linux tools android-sdk
-    proj_clone tools/eclipse linux32 tools eclipse
+    proj_clone android-sdk linux tools android-sdk
+    proj_clone eclipse linux32 tools eclipse
 fi
 elif [ $1 = pull ] ; then
     proj_pull apps adb
