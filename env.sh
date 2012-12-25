@@ -1,6 +1,6 @@
 # Copyright (C) Li Zheng <flyskywhy@gmail.com>
 
-PROJ_ROOT=`pwd`
+PROJ_ROOT=$(cd "${BASH_ARGV[0]%/*}/.."; pwd)
 export PROJ_ROOT
 
 PATH=$PROJ_ROOT/proj:$PATH
