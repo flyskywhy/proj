@@ -52,7 +52,7 @@ proj_fetch ()
 if [ $# = 0 ] ; then
     proj_help
 elif [ $1 = clone ] ; then
-#   proj_clone romete_repository branch folder local_repository
+#   proj_clone remote_repository branch folder local_repository
     proj_clone android-apps-host adb-gb apps adb
     proj_clone android-ndk-r7b master tools android-ndk-r7b
     proj_clone android-apps-host android-apps-host-gb tools android-apps-host
