@@ -4,7 +4,8 @@
 
 if [ ! $PROJ_ROOT ]; then 
 	echo Please set root for proj
-else
+	exit
+fi
 
 ROOT=$PROJ_ROOT/proj
 echo $ROOT
@@ -54,5 +55,3 @@ make -j8 -f $ECOS_REPOSITORY/../host/tools/configtool/standalone/wxwin/makefile.
 [ -d $ROOT/source ] && rm -rf $ROOT/source 
 
 cd $PROJ_ROOT
-
-fi
