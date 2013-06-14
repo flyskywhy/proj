@@ -59,7 +59,7 @@ elif [ $1 = clone ] ; then
 #   proj_clone remote_repository branch folder local_repository another_GIT_SERVER_if_needed
     proj_clone ecos microblaze . ecos
     proj_clone flyskywhys-mbref master . mbref 'git://gitorious.org/~flyskywhy/mbref'
-    proj_clone lwip_app_base master apps lwip_app_base
+    proj_clone ecos_app_base master apps ecos_app_base
     proj_clone yaffs-ecoscentric-gpl master . yaffs-ecoscentric-gpl
     proj_clone ecos-htdocs master . htdocs
     proj_clone wxWidgets WX_2_8_8 tools wxWidgets
@@ -80,7 +80,7 @@ fi
 elif [ $1 = pull ] ; then
     proj_pull . ecos
     proj_pull . mbref
-    proj_pull apps lwip_app_base
+    proj_pull apps ecos_app_base
     proj_pull . yaffs-ecoscentric-gpl
     proj_pull . htdocs
     proj_pull tools wxWidgets
@@ -93,7 +93,7 @@ elif [ $1 = pull ] ; then
 elif [ $1 = fetch ] ; then
     proj_fetch . ecos
     proj_fetch . mbref
-    proj_fetch apps lwip_app_base
+    proj_fetch apps ecos_app_base
     proj_fetch . yaffs-ecoscentric-gpl
     proj_fetch . htdocs
     proj_fetch tools wxWidgets
