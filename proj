@@ -66,9 +66,11 @@ elif [ $1 = clone ] ; then
 if [ -n "$USE_MINGW" ]; then
     proj_clone ecos-tools windows tools ecos-tools
     proj_clone microblazeel-unknown-linux-gnu windows tools microblazeel-unknown-linux-gnu
+    proj_clone i386-elf windows tools i386-elf
 else
     proj_clone ecos-tools linux tools ecos-tools
     proj_clone microblazeel-unknown-linux-gnu linux tools microblazeel-unknown-linux-gnu
+    proj_clone i386-elf linux tools i386-elf
 fi
 elif [ $1 = pull ] ; then
     proj_pull . ecos
@@ -79,6 +81,7 @@ elif [ $1 = pull ] ; then
     proj_pull tools wxWidgets
     proj_pull tools ecos-tools
     proj_pull tools microblazeel-unknown-linux-gnu
+    proj_pull tools i386-elf
 elif [ $1 = fetch ] ; then
     proj_fetch . ecos
     proj_fetch . mbref
@@ -88,6 +91,7 @@ elif [ $1 = fetch ] ; then
     proj_fetch tools wxWidgets
     proj_fetch tools ecos-tools
     proj_fetch tools microblazeel-unknown-linux-gnu
+    proj_fetch tools i386-elf
 else
     proj_help
 fi
