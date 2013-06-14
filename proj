@@ -63,6 +63,7 @@ elif [ $1 = clone ] ; then
     proj_clone yaffs-ecoscentric-gpl master . yaffs-ecoscentric-gpl
     proj_clone ecos-htdocs master . htdocs
     proj_clone wxWidgets WX_2_8_8 tools wxWidgets
+    proj_clone makefile master tools makefile
 if [ -n "$USE_MINGW" ]; then
     proj_clone ecos-tools windows tools ecos-tools
     proj_clone microblazeel-unknown-linux-gnu windows tools microblazeel-unknown-linux-gnu
@@ -79,6 +80,7 @@ elif [ $1 = pull ] ; then
     proj_pull . yaffs-ecoscentric-gpl
     proj_pull . htdocs
     proj_pull tools wxWidgets
+    proj_pull tools makefile
     proj_pull tools ecos-tools
     proj_pull tools microblazeel-unknown-linux-gnu
     proj_pull tools i386-elf
@@ -89,6 +91,7 @@ elif [ $1 = fetch ] ; then
     proj_fetch . yaffs-ecoscentric-gpl
     proj_fetch . htdocs
     proj_fetch tools wxWidgets
+    proj_fetch tools makefile
     proj_fetch tools ecos-tools
     proj_fetch tools microblazeel-unknown-linux-gnu
     proj_fetch tools i386-elf
