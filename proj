@@ -66,10 +66,14 @@ elif [ $1 = clone ] ; then
     proj_clone makefile master tools makefile
 if [ -n "$USE_MINGW" ]; then
     proj_clone ecos-tools windows tools ecos-tools
+    proj_clone eclipse win32 tools eclipse
+    proj_clone mipsisa32-elf windows tools mipsisa32-elf
     proj_clone microblazeel-unknown-linux-gnu windows tools microblazeel-unknown-linux-gnu
     proj_clone i386-elf windows tools i386-elf
 else
     proj_clone ecos-tools linux tools ecos-tools
+    proj_clone eclipse linux32 tools eclipse
+    proj_clone mipsisa32-elf linux tools mipsisa32-elf
     proj_clone microblazeel-unknown-linux-gnu linux tools microblazeel-unknown-linux-gnu
     proj_clone i386-elf linux tools i386-elf
 fi
@@ -82,6 +86,8 @@ elif [ $1 = pull ] ; then
     proj_pull tools wxWidgets
     proj_pull tools makefile
     proj_pull tools ecos-tools
+    proj_pull tools eclipse
+    proj_pull tools mipsisa32-elf
     proj_pull tools microblazeel-unknown-linux-gnu
     proj_pull tools i386-elf
 elif [ $1 = fetch ] ; then
@@ -93,6 +99,8 @@ elif [ $1 = fetch ] ; then
     proj_fetch tools wxWidgets
     proj_fetch tools makefile
     proj_fetch tools ecos-tools
+    proj_fetch tools eclipse
+    proj_fetch tools mipsisa32-elf
     proj_fetch tools microblazeel-unknown-linux-gnu
     proj_fetch tools i386-elf
 else

@@ -7,6 +7,8 @@ PATH=$PROJ_ROOT/proj:$PATH
 PATH=$PROJ_ROOT/ecos/scripts:$PATH
 PATH=$PROJ_ROOT/ecos/examples:$PATH
 PATH=$PROJ_ROOT/tools/ecos-tools/bin:$PATH
+PATH=$PROJ_ROOT/tools/eclipse:$PATH
+PATH=$PROJ_ROOT/tools/mipsisa32-elf/bin:$PATH
 PATH=$PROJ_ROOT/tools/microblazeel-unknown-linux-gnu/bin:$PATH
 PATH=$PROJ_ROOT/tools/i386-elf/bin:$PATH
 export PATH
