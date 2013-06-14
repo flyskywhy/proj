@@ -57,28 +57,35 @@ if [ $# = 0 ] ; then
     proj_help
 elif [ $1 = clone ] ; then
 #   proj_clone remote_repository branch folder local_repository another_GIT_SERVER_if_needed
-    proj_clone android-apps-host adb-gb apps adb
-    proj_clone android-ndk-r7b master tools android-ndk-r7b
-    proj_clone android-apps-host android-apps-host-gb tools android-apps-host
+    proj_clone ecos microblaze . ecos
+    proj_clone yaffs-ecoscentric-gpl master . yaffs-ecoscentric-gpl
+    proj_clone ecos-htdocs master . htdocs
+    proj_clone wxWidgets WX_2_8_8 tools wxWidgets
 if [ -n "$USE_MINGW" ]; then
-    proj_clone android-sdk windows tools android-sdk
     proj_clone eclipse win32 tools eclipse
+    proj_clone ecos-tools windows tools ecos-tools
+    proj_clone mipsisa32-elf windows tools mipsisa32-elf
 else
-    proj_clone android-sdk linux tools android-sdk
     proj_clone eclipse linux32 tools eclipse
+    proj_clone ecos-tools linux tools ecos-tools
+    proj_clone mipsisa32-elf linux tools mipsisa32-elf
 fi
 elif [ $1 = pull ] ; then
-    proj_pull apps adb
-    proj_pull tools android-ndk-r7b
-    proj_pull tools android-apps-host
-    proj_pull tools android-sdk
+    proj_pull . ecos
+    proj_pull . yaffs-ecoscentric-gpl
+    proj_pull . htdocs
+    proj_pull tools wxWidgets
     proj_pull tools eclipse
+    proj_pull tools ecos-tools
+    proj_pull tools mipsisa32-elf
 elif [ $1 = fetch ] ; then
-    proj_fetch apps adb
-    proj_fetch tools android-ndk-r7b
-    proj_fetch tools android-apps-host
-    proj_fetch tools android-sdk
+    proj_fetch . ecos
+    proj_fetch . yaffs-ecoscentric-gpl
+    proj_fetch . htdocs
+    proj_fetch tools wxWidgets
     proj_fetch tools eclipse
+    proj_fetch tools ecos-tools
+    proj_fetch tools mipsisa32-elf
 else
     proj_help
 fi
