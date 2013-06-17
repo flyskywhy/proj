@@ -11,6 +11,7 @@ PATH=$PROJ_ROOT/tools/eclipse:$PATH
 PATH=$PROJ_ROOT/tools/mipsisa32-elf/bin:$PATH
 PATH=$PROJ_ROOT/tools/microblazeel-unknown-linux-gnu/bin:$PATH
 PATH=$PROJ_ROOT/tools/i386-elf/bin:$PATH
+PATH=$PROJ_ROOT/tools/arm-eabi/bin:$PATH
 export PATH
 
 . $PROJ_ROOT/ecos/scripts/envsetup.sh

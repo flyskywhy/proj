@@ -70,12 +70,14 @@ if [ -n "$USE_MINGW" ]; then
     proj_clone mipsisa32-elf windows tools mipsisa32-elf
     proj_clone microblazeel-unknown-linux-gnu windows tools microblazeel-unknown-linux-gnu
     proj_clone i386-elf windows tools i386-elf
+    proj_clone arm-eabi windows tools arm-eabi
 else
     proj_clone ecos-tools linux tools ecos-tools
     proj_clone eclipse linux32 tools eclipse
     proj_clone mipsisa32-elf linux tools mipsisa32-elf
     proj_clone microblazeel-unknown-linux-gnu linux tools microblazeel-unknown-linux-gnu
     proj_clone i386-elf linux tools i386-elf
+    proj_clone arm-eabi linux tools arm-eabi
 fi
 elif [ $1 = pull ] ; then
     proj_pull . ecos
@@ -90,6 +92,7 @@ elif [ $1 = pull ] ; then
     proj_pull tools mipsisa32-elf
     proj_pull tools microblazeel-unknown-linux-gnu
     proj_pull tools i386-elf
+    proj_pull tools arm-eabi
 elif [ $1 = fetch ] ; then
     proj_fetch . ecos
     proj_fetch . mbref
@@ -103,6 +106,7 @@ elif [ $1 = fetch ] ; then
     proj_fetch tools mipsisa32-elf
     proj_fetch tools microblazeel-unknown-linux-gnu
     proj_fetch tools i386-elf
+    proj_fetch tools arm-eabi
 else
     proj_help
 fi
