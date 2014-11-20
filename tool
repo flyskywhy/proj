@@ -23,14 +23,14 @@ cd $ROOT/source/wx-build
 echo Configuring wxGTK ...
 $ROOT/../tools/wxWidgets/configure --disable-shared --disable-sockets --prefix=$ROOT/source/wxGTK && echo done
 echo Makeing wxGTK ...
-make -j8 && echo done
+make && echo done
 echo Installing wxGTK ...
 make install && echo done
 
 # Build wx/gizmos, e.g. wx/gizmos/splittree.h:
 echo Makeing wx/gizmos ...
 cd $ROOT/source/wx-build/contrib/src/gizmos
-make -j8 && echo done
+make && echo done
 echo Installing wx/gizmos ...
 make install && echo done
 
@@ -40,7 +40,7 @@ cd $ROOT/source/infra-build
 echo Configuring infra-build ...
 $ECOS_REPOSITORY/../host/configure --prefix=$ROOT/../tools/ecos-tools && echo done
 echo Makeing infra-build ...
-make -j8
+make
 echo Installing infra-build ...
 make install && echo done
 
@@ -48,7 +48,7 @@ make install && echo done
 mkdir -p $ROOT/source/configtool-build
 cd $ROOT/source/configtool-build
 echo Makeing ConfigTools ...
-make -j8 -f $ECOS_REPOSITORY/../host/tools/configtool/standalone/wxwin/makefile.gnu \
+make -f $ECOS_REPOSITORY/../host/tools/configtool/standalone/wxwin/makefile.gnu \
     install WXDIR=$ROOT/source/wxGTK ECOSSRCDIR=$ECOS_REPOSITORY/../host \
     INSTALLDIR=$ROOT/../tools/ecos-tools && echo done
 
