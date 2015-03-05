@@ -58,7 +58,7 @@ if [ $# = 0 ] ; then
 elif [ $1 = clone ] ; then
 #   proj_clone remote_repository branch folder local_repository another_GIT_SERVER_if_needed
     proj_clone ecos microblaze . ecos
-    proj_clone flyskywhys-mbref master . mbref 'git://gitorious.org/~flyskywhy/mbref'
+    proj_clone mbref master . mbref 'git@gitlab.com:flyskywhy'
     proj_clone ecos_app_base master apps ecos_app_base
     proj_clone yaffs-ecoscentric-gpl master . yaffs-ecoscentric-gpl
     proj_clone ecos-htdocs master . htdocs
