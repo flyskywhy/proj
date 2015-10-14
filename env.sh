@@ -1,6 +1,7 @@
 # Copyright (C) Li Zheng <flyskywhy@gmail.com>
 
-PROJ_ROOT=$(cd "${BASH_ARGV[0]%/*}/.."; pwd)
+ENV_SH=./${BASH_ARGV[0]}
+PROJ_ROOT=$(cd "${ENV_SH%/*}/.."; pwd)
 export PROJ_ROOT
 
 PATH=$PROJ_ROOT/proj:$PATH
